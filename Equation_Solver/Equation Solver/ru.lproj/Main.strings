@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "A ･ x² + B ･ x + C = 0"; ObjectID = "3cu-9C-U2G"; */
+"3cu-9C-U2G.text" = "A ･ x² + B ･ x + C = 0";
+
+/* Class = "UILabel"; text = "X₂:"; ObjectID = "4qI-i7-Q0K"; */
+"4qI-i7-Q0K.text" = "X₂:";
+
+/* Class = "UILabel"; text = "X₁:"; ObjectID = "6nO-RP-Xcx"; */
+"6nO-RP-Xcx.text" = "X₁:";
+
+/* Class = "UILabel"; text = "A:"; ObjectID = "ALN-Yr-656"; */
+"ALN-Yr-656.text" = "A:";
+
+/* Class = "UIButton"; normalTitle = "Solve"; ObjectID = "Adh-ru-dZe"; */
+"Adh-ru-dZe.normalTitle" = "Решить";
+
+/* Class = "UILabel"; text = "D:"; ObjectID = "CX7-0p-BTQ"; */
+"CX7-0p-BTQ.text" = "D:";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "Qqa-gJ-xOI"; */
+"Qqa-gJ-xOI.text" = "-";
+
+/* Class = "UILabel"; text = "B:"; ObjectID = "Zoy-g9-bp4"; */
+"Zoy-g9-bp4.text" = "B:";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "fn6-IQ-tVI"; */
+"fn6-IQ-tVI.text" = "-";
+
+/* Class = "UILabel"; text = "C:"; ObjectID = "lEM-04-X6M"; */
+"lEM-04-X6M.text" = "C:";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "mK8-QN-03L"; */
+"mK8-QN-03L.text" = "-";

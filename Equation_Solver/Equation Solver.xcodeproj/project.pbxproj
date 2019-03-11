@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9CC6C2C208493D25335904DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6C9C89CF28ACDEC33B3CE /* AppDelegate.swift */; };
+		9CC6C32EE75AFCD3CA00F33F /* Equation_SolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6CCE8B8FB7E7346CA3419 /* Equation_SolverUITests.swift */; };
+		9CC6C53EF4F8946ED45E9783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC6C7D7153902955BE53309 /* Main.storyboard */; };
+		9CC6C6B4AF84BFDF44B6545B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC6CF759F9338317DF82526 /* LaunchScreen.storyboard */; };
+		9CC6C75D41C049BB61D2B1EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CC6C5C392DAE9BC8F88EB6A /* Assets.xcassets */; };
+		9CC6C8BCFA0B388411D752B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6C14CA62B5A50D82ADF06 /* ViewController.swift */; };
+		9CC6CB340F4705C25DB294AE /* Equation_SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6CD3A9514DD698641A0D1 /* Equation_SolverTests.swift */; };
+		E10A07ED2225995600488F8E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E10A07EF2225995600488F8E /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9CC6C3ED8ABC1D1866A8010F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CC6C3EA56D6B8EAC7C5A02F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CC6C2EF95B08EBAC4504B9C;
+			remoteInfo = "Equation Solver";
+		};
+		9CC6CE0B6E2FBC6665EC349E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CC6C3EA56D6B8EAC7C5A02F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CC6C2EF95B08EBAC4504B9C;
+			remoteInfo = "Equation Solver";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9CC6C14CA62B5A50D82ADF06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9CC6C195E24E5465004D9194 /* Equation SolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Equation SolverTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CC6C5C392DAE9BC8F88EB6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CC6C6DFEC3B0BF605D582EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9CC6C77F3040451C749F374E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		9CC6C9C89CF28ACDEC33B3CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9CC6CAE5F67444403EC50D85 /* Equation Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Equation Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CC6CB39118269EDE6E01CB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9CC6CB95D8CC98045733BCD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		9CC6CBCD533AF3516CB2D24C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		9CC6CCE8B8FB7E7346CA3419 /* Equation_SolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equation_SolverUITests.swift; sourceTree = "<group>"; };
+		9CC6CD3A9514DD698641A0D1 /* Equation_SolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equation_SolverTests.swift; sourceTree = "<group>"; };
+		9CC6CEA5B380CD5A76235BA3 /* Equation SolverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Equation SolverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E10A07EE2225995600488F8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E10A07F12236DDB900488F8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		E10A07F22236E16900488F8E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E10A07F32236E16900488F8E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		E10A07F42236E16900488F8E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9CC6C0FFB10C3845C2886538 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CC6CE336B3F32ABF8BB428D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CC6CF30EAEF8DAA1EE16D0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9CC6C3B02BE566828E17AE30 /* Equation SolverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9CC6CB95D8CC98045733BCD7 /* Info.plist */,
+				9CC6CCE8B8FB7E7346CA3419 /* Equation_SolverUITests.swift */,
+			);
+			path = "Equation SolverUITests";
+			sourceTree = "<group>";
+		};
+		9CC6C4ECAF37E6294402B172 = {
+			isa = PBXGroup;
+			children = (
+				9CC6CB4EAF8D128C192C2D86 /* Products */,
+				9CC6CDE0B3112C45D4D17A27 /* Equation Solver */,
+				9CC6C96813178E846356EB53 /* Equation SolverTests */,
+				9CC6C3B02BE566828E17AE30 /* Equation SolverUITests */,
+			);
+			sourceTree = "<group>";
+		};
+		9CC6C96813178E846356EB53 /* Equation SolverTests */ = {
+			isa = PBXGroup;
+			children = (
+				9CC6CBCD533AF3516CB2D24C /* Info.plist */,
+				9CC6CD3A9514DD698641A0D1 /* Equation_SolverTests.swift */,
+			);
+			path = "Equation SolverTests";
+			sourceTree = "<group>";
+		};
+		9CC6CB4EAF8D128C192C2D86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CC6CAE5F67444403EC50D85 /* Equation Solver.app */,
+				9CC6C195E24E5465004D9194 /* Equation SolverTests.xctest */,
+				9CC6CEA5B380CD5A76235BA3 /* Equation SolverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CC6CDE0B3112C45D4D17A27 /* Equation Solver */ = {
+			isa = PBXGroup;
+			children = (
+				9CC6C77F3040451C749F374E /* Info.plist */,
+				9CC6C5C392DAE9BC8F88EB6A /* Assets.xcassets */,
+				9CC6CF759F9338317DF82526 /* LaunchScreen.storyboard */,
+				9CC6C9C89CF28ACDEC33B3CE /* AppDelegate.swift */,
+				9CC6C7D7153902955BE53309 /* Main.storyboard */,
+				9CC6C14CA62B5A50D82ADF06 /* ViewController.swift */,
+				E10A07EF2225995600488F8E /* Localizable.strings */,
+			);
+			path = "Equation Solver";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9CC6C1B4FF6099EE3D7BA202 /* Equation SolverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CC6C665803489E77DC8483D /* Build configuration list for PBXNativeTarget "Equation SolverUITests" */;
+			buildPhases = (
+				9CC6C890E8868181A67E04E0 /* Sources */,
+				9CC6CE336B3F32ABF8BB428D /* Frameworks */,
+				9CC6C0F72EB4CD37ED6893DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CC6C940180305F55A3E22CA /* PBXTargetDependency */,
+			);
+			name = "Equation SolverUITests";
+			productName = "Equation SolverUITests";
+			productReference = 9CC6CEA5B380CD5A76235BA3 /* Equation SolverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		9CC6C2EF95B08EBAC4504B9C /* Equation Solver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CC6C32EA800E0D58B665CB2 /* Build configuration list for PBXNativeTarget "Equation Solver" */;
+			buildPhases = (
+				9CC6C1337B9D93F8D05F104A /* Sources */,
+				9CC6C0FFB10C3845C2886538 /* Frameworks */,
+				9CC6C582F09C683E12F54D98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Equation Solver";
+			productName = "Equation Solver";
+			productReference = 9CC6CAE5F67444403EC50D85 /* Equation Solver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9CC6C4F2C746B449EE526E68 /* Equation SolverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CC6C779FE400AF7FD62819E /* Build configuration list for PBXNativeTarget "Equation SolverTests" */;
+			buildPhases = (
+				9CC6C1E1CB581D5E34700160 /* Sources */,
+				9CC6CF30EAEF8DAA1EE16D0A /* Frameworks */,
+				9CC6CD3B8950601EA8340763 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CC6C3F5D53B65BE386D217E /* PBXTargetDependency */,
+			);
+			name = "Equation SolverTests";
+			productName = "Equation SolverTests";
+			productReference = 9CC6C195E24E5465004D9194 /* Equation SolverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9CC6C3EA56D6B8EAC7C5A02F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Aleksey K";
+				TargetAttributes = {
+					9CC6C2EF95B08EBAC4504B9C = {
+						DevelopmentTeam = 746J3RD492;
+					};
+				};
+			};
+			buildConfigurationList = 9CC6C5D117222FCA80988BB5 /* Build configuration list for PBXProject "Equation Solver" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				ru,
+			);
+			mainGroup = 9CC6C4ECAF37E6294402B172;
+			productRefGroup = 9CC6CB4EAF8D128C192C2D86 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9CC6C2EF95B08EBAC4504B9C /* Equation Solver */,
+				9CC6C4F2C746B449EE526E68 /* Equation SolverTests */,
+				9CC6C1B4FF6099EE3D7BA202 /* Equation SolverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9CC6C0F72EB4CD37ED6893DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CC6C582F09C683E12F54D98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CC6C75D41C049BB61D2B1EC /* Assets.xcassets in Resources */,
+				E10A07ED2225995600488F8E /* Localizable.strings in Resources */,
+				9CC6C6B4AF84BFDF44B6545B /* LaunchScreen.storyboard in Resources */,
+				9CC6C53EF4F8946ED45E9783 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CC6CD3B8950601EA8340763 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9CC6C1337B9D93F8D05F104A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CC6C2C208493D25335904DE /* AppDelegate.swift in Sources */,
+				9CC6C8BCFA0B388411D752B4 /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CC6C1E1CB581D5E34700160 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CC6CB340F4705C25DB294AE /* Equation_SolverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CC6C890E8868181A67E04E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CC6C32EE75AFCD3CA00F33F /* Equation_SolverUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9CC6C3F5D53B65BE386D217E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CC6C2EF95B08EBAC4504B9C /* Equation Solver */;
+			targetProxy = 9CC6CE0B6E2FBC6665EC349E /* PBXContainerItemProxy */;
+		};
+		9CC6C940180305F55A3E22CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CC6C2EF95B08EBAC4504B9C /* Equation Solver */;
+			targetProxy = 9CC6C3ED8ABC1D1866A8010F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9CC6C7D7153902955BE53309 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CC6CB39118269EDE6E01CB4 /* Base */,
+				E10A07F12236DDB900488F8E /* en */,
+				E10A07F32236E16900488F8E /* ru */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9CC6CF759F9338317DF82526 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CC6C6DFEC3B0BF605D582EF /* Base */,
+				E10A07F22236E16900488F8E /* ru */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E10A07EF2225995600488F8E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E10A07EE2225995600488F8E /* en */,
+				E10A07F42236E16900488F8E /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9CC6C46334855713CD2554A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9CC6C6106FFAB31582651CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Equation Solver.app/Equation Solver";
+				INFOPLIST_FILE = "Equation SolverTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AK.Equation-SolverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		9CC6C6FD43FA7DBBA07AA855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 746J3RD492;
+				INFOPLIST_FILE = "Equation Solver/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AK.Equation-Solver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9CC6C76E303ECE7D9F3D105C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 746J3RD492;
+				INFOPLIST_FILE = "Equation Solver/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AK.Equation-Solver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9CC6C99676A41082F84F6B3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Equation SolverUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AK.Equation-SolverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Equation Solver";
+			};
+			name = Debug;
+		};
+		9CC6CBBBB4A101548DC30D41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Equation Solver.app/Equation Solver";
+				INFOPLIST_FILE = "Equation SolverTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AK.Equation-SolverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+		9CC6CEAABD648642C2C0CDEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Equation SolverUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AK.Equation-SolverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Equation Solver";
+			};
+			name = Release;
+		};
+		9CC6CFF4062A92C6B2249F73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9CC6C32EA800E0D58B665CB2 /* Build configuration list for PBXNativeTarget "Equation Solver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CC6C76E303ECE7D9F3D105C /* Debug */,
+				9CC6C6FD43FA7DBBA07AA855 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CC6C5D117222FCA80988BB5 /* Build configuration list for PBXProject "Equation Solver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CC6C46334855713CD2554A9 /* Debug */,
+				9CC6CFF4062A92C6B2249F73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CC6C665803489E77DC8483D /* Build configuration list for PBXNativeTarget "Equation SolverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CC6C99676A41082F84F6B3C /* Debug */,
+				9CC6CEAABD648642C2C0CDEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CC6C779FE400AF7FD62819E /* Build configuration list for PBXNativeTarget "Equation SolverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CC6C6106FFAB31582651CCE /* Debug */,
+				9CC6CBBBB4A101548DC30D41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9CC6C3EA56D6B8EAC7C5A02F /* Project object */;
+}

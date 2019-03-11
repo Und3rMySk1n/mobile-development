@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Equation Solver
+
+  Created by Aleksey Koptelin on 19/02/2019.
+  Copyright © 2019 Aleksey K. All rights reserved.
+*/
+
+A_B_C = "Some Text";
