@@ -24,27 +24,27 @@ class ViewController: UIViewController {
     @IBAction func solveEquation(_ sender: Any) {
 
         guard let aTextFieldContent = aTextField.text, !aTextFieldContent.isEmpty else {
-            animateTextInput(weak: aTextField)
+            animateTextInput(aTextField)
             return
         }
-        returnRegularViewForInput(weak: aTextField)
+        returnRegularViewForInput(aTextField)
         
         guard let bTextFieldContent = bTextField.text, !bTextFieldContent.isEmpty else {
-            animateTextInput(weak: bTextField)
+            animateTextInput(bTextField)
             return
         }
-        returnRegularViewForInput(weak: bTextField)
+        returnRegularViewForInput(bTextField)
 
         guard let cTextFieldContent = cTextField.text, !cTextFieldContent.isEmpty else {
-            animateTextInput(weak: cTextField)
+            animateTextInput(cTextField)
             return
         }
-        returnRegularViewForInput(weak: cTextField)
+        returnRegularViewForInput(cTextField)
         
         let a = Double(aTextFieldContent)
         let b = Double(bTextFieldContent)
         let c = Double(cTextFieldContent)
-k
+
         if (a != nil && b != nil && c != nil) {
             let d: Double = pow(b!, 2) - 4 * a! * c!
             var x1: Double? = nil
@@ -73,34 +73,30 @@ k
                 resultX2.text = String("-")
             }
         }
+    }
+
+    func returnRegularViewForInput(_ textField: UITextField?) {
+        textField?.layer.borderWidth = 0.0
+    }
+    
+    func animateTextInput(_ textInput: UITextField?) {
+        guard let textInput = textInput else {
+            return
+        }
         
-        let someText = NSLocalizedString("A_B_C", comment: "")
-        print(someText)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    func returnRegularViewForInput(weak textInput: UITextField?) {
-        textInput!.layer.borderWidth = 0.0
-    }
-    
-    func animateTextInput(weak textInput: UITextField?) {
-        textInput!.frame = CGRect(x: textInput!.frame.minX,
-                                  y: textInput!.frame.minY - 2,
-                                  width: textInput!.frame.width,
-                                  height: textInput!.frame.height)
+        textInput.frame = CGRect(x: textInput.frame.minX,
+                                  y: textInput.frame.minY - 2,
+                                  width: textInput.frame.width,
+                                  height: textInput.frame.height)
         
         UIView.animate(withDuration: 0.5) {
-            textInput!.frame = CGRect(x: textInput!.frame.minX,
-                                           y: textInput!.frame.minY + 2,
-                                           width: textInput!.frame.width,
-                                           height: textInput!.frame.height)
+            textInput.frame = CGRect(x: textInput.frame.minX,
+                                           y: textInput.frame.minY + 2,
+                                           width: textInput.frame.width,
+                                           height: textInput.frame.height)
             
-            textInput!.layer.borderColor = UIColor.red.cgColor
-            textInput!.layer.borderWidth = 1.0
+            textInput.layer.borderColor = UIColor.red.cgColor
+            textInput.layer.borderWidth = 1.0
         }
     }
 }
