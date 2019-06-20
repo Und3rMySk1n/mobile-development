@@ -17,32 +17,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         /*
-         
-        let painkiller = Category()
-        painkiller.name = "Обезболивающее"
-        
-        let headache = Category()
-        headache.name = "Головная боль"
-        
-        CoreDataManager.instance.saveContext()
-        
-        
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Category")
+        let categoryRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Category")
         do {
-            let results = try CoreDataManager.instance.persistentContainer.viewContext.fetch(fetchRequest)
+            let results = try CoreDataManager.instance.persistentContainer.viewContext.fetch(categoryRequest)
             for result in results as! [Category] {
-                print("name: ", result.name!)
-                //CoreDataManager.instance.persistentContainer.viewContext.delete(result)
+                CoreDataManager.instance.persistentContainer.viewContext.delete(result)
             }
         }
         catch {
             print(error)
         }
         
-        CoreDataManager.instance.saveContext()
-         
-        */
+        // Initial data
+        let painkiller = Category()
+        painkiller.name = "Обезболивающее"
+        let headache = Category()
+        headache.name = "Головная боль"
         
+        CoreDataManager.instance.saveContext()
+        */
+ 
         return true
     }
 

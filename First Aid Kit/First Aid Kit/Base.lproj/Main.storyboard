@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Категории-->
+        <!--Categories-->
         <scene sceneID="gbf-b3-CWm">
             <objects>
                 <tableViewController id="wkm-mA-SH8" customClass="CategoriesTableViewController" customModule="First_Aid_Kit" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                             <outlet property="delegate" destination="wkm-mA-SH8" id="cUt-eh-fVA"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Категории" id="GtQ-SZ-y4U"/>
+                    <tabBarItem key="tabBarItem" title="Categories" id="GtQ-SZ-y4U"/>
                     <connections>
                         <segue destination="rMe-V4-rUN" kind="presentation" identifier="categoriesToCategory" id="ncc-1s-Vif"/>
                     </connections>
@@ -95,7 +95,7 @@
             </objects>
             <point key="canvasLocation" x="1032.8" y="1029.5352323838081"/>
         </scene>
-        <!--Прием лекарства-->
+        <!--Schedule-->
         <scene sceneID="eTn-fh-iOY">
             <objects>
                 <viewController id="omI-RQ-TTu" customClass="ScheduleViewController" customModule="First_Aid_Kit" customModuleProvider="target" sceneMemberID="viewController">
@@ -115,7 +115,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xTY-3I-xSA"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Прием лекарства" id="A9v-cd-Fhd"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" id="A9v-cd-Fhd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRh-kF-Tvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,41 +151,123 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mjh-g2-yKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1034" y="235"/>
+            <point key="canvasLocation" x="1671" y="235"/>
         </scene>
         <!--Dashboard-->
-        <scene sceneID="Hvo-zI-z7H">
+        <scene sceneID="jCg-wL-5jG">
             <objects>
-                <viewController id="3i4-VW-s1f" userLabel="Dashboard" customClass="DashboardViewController" customModule="First_Aid_Kit" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JhQ-g2-m5M">
+                <tableViewController id="JgV-FW-k9R" customClass="DashboardTableViewController" customModule="First_Aid_Kit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="vBw-iQ-eHi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="JgV-FW-k9R" id="K1K-f0-DBj"/>
+                            <outlet property="delegate" destination="JgV-FW-k9R" id="Xfe-hl-FGL"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Dashboard" id="syq-xA-Ul7"/>
+                    <connections>
+                        <segue destination="8tR-Og-TDT" kind="presentation" identifier="dashboardToMedicament" id="9QA-NN-fci"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aZy-n0-zsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1" y="13"/>
+        </scene>
+        <!--Medicament-->
+        <scene sceneID="RyA-dp-cJB">
+            <objects>
+                <viewController title="Medicament" id="8tR-Og-TDT" customClass="MedicamentViewController" customModule="First_Aid_Kit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D4a-ah-4Ch">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Тут будет дашборд" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TJo-Yi-v9Z">
-                                <rect key="frame" x="67" y="132" width="240" height="128"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="be7-Tt-WtB">
+                                <rect key="frame" x="37" y="95" width="50" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Expires:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PY-5q-LeP">
+                                <rect key="frame" x="37" y="179" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhX-6A-mrt">
+                                <rect key="frame" x="32" y="336" width="75" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K0z-Vt-iCN" userLabel="nameTextField">
+                                <rect key="frame" x="37" y="124" width="301" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofj-I0-QwC">
-                                <rect key="frame" x="164" y="553" width="46" height="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kj1-2q-6Zy" userLabel="nameTextField">
+                                <rect key="frame" x="32" y="365" width="306" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="de6-Ms-uSg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Medicament" id="UOQ-TW-afU"/>
+                                </items>
+                            </navigationBar>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="V8k-Kf-umj">
+                                <rect key="frame" x="0.0" y="208" width="375" height="105"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="582765550.24438596">
+                                    <!--2019-06-20 23:19:10 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOv-th-sNl">
+                                <rect key="frame" x="37" y="421" width="301" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.45476070330000001" green="0.79880536729999996" blue="0.0059339988429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <segue destination="VAD-CZ-j20" kind="push" id="MUn-fd-hz9"/>
+                                    <action selector="save:" destination="8tR-Og-TDT" eventType="touchUpInside" id="Vli-qw-esq"/>
+                                    <action selector="save:" destination="rMe-V4-rUN" eventType="touchUpInside" id="t4u-d6-PXV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmS-Xn-YuK">
+                                <rect key="frame" x="37" y="469" width="301" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86720773959999997" green="0.36647222940000002" blue="0.46490771320000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="8tR-Og-TDT" eventType="touchUpInside" id="Hxh-r1-FSv"/>
+                                    <action selector="cancel:" destination="rMe-V4-rUN" eventType="touchUpInside" id="cfA-fv-FLl"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ZW9-oS-2jn"/>
+                        <viewLayoutGuide key="safeArea" id="c3O-vL-MJi"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Моя аптечка" id="S6A-0G-56R"/>
-                    <navigationItem key="navigationItem" title="Главная" id="Gpw-Vi-SAY"/>
+                    <navigationItem key="navigationItem" title="Title" id="p90-Kr-hYo"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="K0z-Vt-iCN" id="zDX-53-Kni"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cYK-g3-Hdv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HNW-jQ-XcK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="236"/>
+            <point key="canvasLocation" x="740" y="11.244377811094454"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CE5-cF-udc">
@@ -198,7 +280,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="3i4-VW-s1f" kind="relationship" relationship="viewControllers" id="63a-EG-RXi"/>
+                        <segue destination="JgV-FW-k9R" kind="relationship" relationship="viewControllers" id="mhZ-op-UAG"/>
                         <segue destination="wkm-mA-SH8" kind="relationship" relationship="viewControllers" id="373-uM-cyV"/>
                         <segue destination="omI-RQ-TTu" kind="relationship" relationship="viewControllers" id="kS3-Ll-dIB"/>
                     </connections>
