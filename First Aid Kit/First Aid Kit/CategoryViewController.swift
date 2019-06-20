@@ -12,14 +12,14 @@ class CategoryViewController: UIViewController {
     
     var category: Category?
     
-    @IBAction func cancel(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func save(_ sender: Any) {
         if saveCategory() {
             dismiss(animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBOutlet weak var nameTextField: UITextField!
@@ -34,7 +34,7 @@ class CategoryViewController: UIViewController {
     func saveCategory() -> Bool {
 
         if nameTextField.text!.isEmpty {
-            let alert = UIAlertController(title: "Validation error", message: "Input the name of the Category!", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Validation error", message: "Input the name of the category!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return false

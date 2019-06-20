@@ -16,13 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        //let painkiller = Category()
-        //painkiller.name = "Обезболивающее"
+        /*
+         
+        let painkiller = Category()
+        painkiller.name = "Обезболивающее"
         
-        //let headache = Category()
-        //headache.name = "Головная боль"
+        let headache = Category()
+        headache.name = "Головная боль"
         
         CoreDataManager.instance.saveContext()
+        
         
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Category")
         do {
@@ -37,6 +40,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         CoreDataManager.instance.saveContext()
+         
+        */
         
         return true
     }

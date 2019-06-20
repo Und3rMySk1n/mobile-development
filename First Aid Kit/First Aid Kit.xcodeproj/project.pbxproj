@@ -18,6 +18,8 @@
 		E13A164122BAC17D00E4B12B /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A163D22BAC17D00E4B12B /* Category+CoreDataProperties.swift */; };
 		E13A164222BAC49100E4B12B /* FirstAidKit.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = E13A163722B94AA700E4B12B /* FirstAidKit.xcdatamodeld */; };
 		E13A164422BAD18F00E4B12B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A164322BAD18F00E4B12B /* CoreDataManager.swift */; };
+		E154274322BC37F000AE3337 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154274222BC37F000AE3337 /* DashboardViewController.swift */; };
+		E154274522BC38AF00AE3337 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E154274422BC38AF00AE3337 /* ScheduleViewController.swift */; };
 		E19C196922BBF89D00D17387 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C196822BBF89D00D17387 /* CategoriesTableViewController.swift */; };
 		E19C196B22BC001F00D17387 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19C196A22BC001F00D17387 /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,8 @@
 		E13A163C22BAC17D00E4B12B /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E13A163D22BAC17D00E4B12B /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E13A164322BAD18F00E4B12B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		E154274222BC37F000AE3337 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		E154274422BC38AF00AE3337 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		E19C196822BBF89D00D17387 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		E19C196A22BC001F00D17387 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,6 +83,8 @@
 				E13A163722B94AA700E4B12B /* FirstAidKit.xcdatamodeld */,
 				E120757022B6B1CA00B1317C /* ViewController.swift */,
 				E120757222B6B1CA00B1317C /* Main.storyboard */,
+				E154274422BC38AF00AE3337 /* ScheduleViewController.swift */,
+				E154274222BC37F000AE3337 /* DashboardViewController.swift */,
 				E19C196A22BC001F00D17387 /* CategoryViewController.swift */,
 				E19C196822BBF89D00D17387 /* CategoriesTableViewController.swift */,
 				E120757522B6B1CC00B1317C /* Assets.xcassets */,
@@ -167,7 +173,9 @@
 				E13A163E22BAC17D00E4B12B /* Medicament+CoreDataClass.swift in Sources */,
 				E120757122B6B1CA00B1317C /* ViewController.swift in Sources */,
 				E13A164422BAD18F00E4B12B /* CoreDataManager.swift in Sources */,
+				E154274322BC37F000AE3337 /* DashboardViewController.swift in Sources */,
 				E19C196B22BC001F00D17387 /* CategoryViewController.swift in Sources */,
+				E154274522BC38AF00AE3337 /* ScheduleViewController.swift in Sources */,
 				E120756F22B6B1CA00B1317C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

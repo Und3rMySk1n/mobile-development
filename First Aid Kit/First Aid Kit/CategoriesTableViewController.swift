@@ -9,16 +9,26 @@
 import UIKit
 import CoreData
 
-class CategoriesTableViewController: UITableViewController {
-    
-    @IBAction func AddCategory(_ sender: Any) {
-        performSegue(withIdentifier: "categoriesToCategory", sender: nil)
-    }
+class CategoriesTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     var fetchedResultsController = CoreDataManager.instance.fetchedResultsController(entityName: "Category", keyForSort: "name")
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let addButton = UIBarButtonItem(
+            title: "Add",
+            style: .plain,
+            target: self,
+            action: #selector(self.AddCategory)
+        )
+        
+        navigationController?.navigationBar.topItem?.title = "Categories"
+        navigationController?.navigationBar.topItem?.leftBarButtonItem = nil
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = addButton
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchedResultsController.delegate = self
         do {
             try fetchedResultsController.performFetch()
         } catch {
@@ -30,6 +40,10 @@ class CategoriesTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    @IBAction func AddCategory(_ sender: Any) {
+        performSegue(withIdentifier: "categoriesToCategory", sender: nil)
     }
 
     // MARK: - Table view data source
@@ -49,7 +63,6 @@ class CategoriesTableViewController: UITableViewController {
             return 0
         }
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let category = fetchedResultsController.object(at: indexPath) as! Category
@@ -72,17 +85,16 @@ class CategoriesTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            let managedObject = fetchedResultsController.object(at: indexPath) as! NSManagedObject
+            CoreDataManager.instance.persistentContainer.viewContext.delete(managedObject)
+            CoreDataManager.instance.saveContext()
+        }
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -110,4 +122,41 @@ class CategoriesTableViewController: UITableViewController {
         }
     }
 
+    
+    // MARK: - Fetched Results Controller Delegate
+    
+    private func controllerWillChangeContent(controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    private func controller(controller: NSFetchedResultsController<NSFetchRequestResult>, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+        switch type {
+        case .insert:
+            if let indexPath = newIndexPath {
+                tableView.insertRows(at: [indexPath as IndexPath], with: .automatic)
+            }
+        case .update:
+            if let indexPath = indexPath {
+                let category = fetchedResultsController.object(at: indexPath as IndexPath) as! Category
+                let cell = tableView.cellForRow(at: indexPath as IndexPath)
+                cell!.textLabel?.text = category.name
+            }
+        case .move:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath as IndexPath], with: .automatic)
+            }
+            if let newIndexPath = newIndexPath {
+                tableView.insertRows(at: [newIndexPath as IndexPath], with: .automatic)
+            }
+        case .delete:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath as IndexPath], with: .automatic)
+            }
+        }
+    }
+    
+    func controllerDidChangeContent(controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
+    
 }
