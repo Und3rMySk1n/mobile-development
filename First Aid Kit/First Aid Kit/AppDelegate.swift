@@ -13,16 +13,14 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let painkiller = Category()
-        painkiller.name = "Обезболивающее"
+        //let painkiller = Category()
+        //painkiller.name = "Обезболивающее"
         
-        let headache = Category()
-        headache.name = "Головная боль"
+        //let headache = Category()
+        //headache.name = "Головная боль"
         
         CoreDataManager.instance.saveContext()
         
@@ -31,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let results = try CoreDataManager.instance.persistentContainer.viewContext.fetch(fetchRequest)
             for result in results as! [Category] {
                 print("name: ", result.name!)
-                CoreDataManager.instance.persistentContainer.viewContext.delete(result)
+                //CoreDataManager.instance.persistentContainer.viewContext.delete(result)
             }
         }
         catch {
@@ -63,6 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
+        CoreDataManager.instance.saveContext()
     }
 
 }

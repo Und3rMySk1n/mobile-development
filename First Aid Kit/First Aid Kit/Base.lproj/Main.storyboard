@@ -13,31 +13,105 @@
         <!--Категории-->
         <scene sceneID="gbf-b3-CWm">
             <objects>
-                <tableViewController id="wkm-mA-SH8" sceneMemberID="viewController">
+                <tableViewController id="wkm-mA-SH8" customClass="CategoriesTableViewController" customModule="First_Aid_Kit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="384-3d-WG0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="o2P-GO-yfi">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o2P-GO-yfi" id="b7N-gx-jXk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <navigationBar key="tableFooterView" contentMode="scaleToFill" id="vvu-ek-wMB">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Categories" id="TW5-md-0VU">
+                                    <barButtonItem key="rightBarButtonItem" style="plain" id="BTe-FT-Ax9">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="THe-LZ-ja4" userLabel="AddCategory">
+                                            <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Add"/>
+                                            <connections>
+                                                <action selector="AddCategory:" destination="wkm-mA-SH8" eventType="touchUpInside" id="a49-eQ-JJf"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
                         <connections>
                             <outlet property="dataSource" destination="wkm-mA-SH8" id="RKh-mI-pm9"/>
                             <outlet property="delegate" destination="wkm-mA-SH8" id="cUt-eh-fVA"/>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Категории" id="GtQ-SZ-y4U"/>
+                    <connections>
+                        <segue destination="rMe-V4-rUN" kind="presentation" identifier="categoriesToCategory" id="ncc-1s-Vif"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21j-av-EJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="958" y="233"/>
+            <point key="canvasLocation" x="244" y="1030"/>
+        </scene>
+        <!--Category-->
+        <scene sceneID="7ne-Za-7NX">
+            <objects>
+                <viewController id="rMe-V4-rUN" userLabel="Category" customClass="CategoryViewController" customModule="First_Aid_Kit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mAg-Pu-r1W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9M-ZX-rWI">
+                                <rect key="frame" x="33" y="101" width="50" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zCl-9R-fz0" userLabel="nameTextField">
+                                <rect key="frame" x="91" y="96" width="243" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DZW-QJ-82r">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Category" id="3nS-1c-OWL">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="qA6-YK-jm0">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pW3-My-nHI" userLabel="cancel">
+                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Cancel"/>
+                                            </button>
+                                            <connections>
+                                                <action selector="cancel:" destination="rMe-V4-rUN" id="B6V-sT-Qtj"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="CpO-bv-iQ2">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IQE-3M-8bA" userLabel="save">
+                                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Save"/>
+                                            </button>
+                                            <connections>
+                                                <action selector="save:" destination="rMe-V4-rUN" id="tJ2-uC-5fF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="v65-vh-xHU"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancel" destination="3nS-1c-OWL" id="rUk-Fg-fsO"/>
+                        <outlet property="nameTextField" destination="zCl-9R-fz0" id="ngb-aE-HDr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p6S-xa-YpJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032.8" y="1029.5352323838081"/>
         </scene>
         <!--Прием лекарства-->
         <scene sceneID="eTn-fh-iOY">
@@ -62,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRh-kF-Tvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1668" y="234"/>
+            <point key="canvasLocation" x="-711" y="1548"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="shl-ox-zyN">
@@ -94,12 +168,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mjh-g2-yKv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244" y="-543"/>
+            <point key="canvasLocation" x="1034" y="235"/>
         </scene>
-        <!--Ukfdyfz-->
+        <!--Dashboard-->
         <scene sceneID="Hvo-zI-z7H">
             <objects>
-                <viewController id="3i4-VW-s1f" sceneMemberID="viewController">
+                <viewController id="3i4-VW-s1f" userLabel="Dashboard" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JhQ-g2-m5M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,7 +198,7 @@
                         <viewLayoutGuide key="safeArea" id="ZW9-oS-2jn"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Моя аптечка" id="S6A-0G-56R"/>
-                    <navigationItem key="navigationItem" title="Ukfdyfz" id="Gpw-Vi-SAY"/>
+                    <navigationItem key="navigationItem" title="Главная" id="Gpw-Vi-SAY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYK-g3-Hdv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
